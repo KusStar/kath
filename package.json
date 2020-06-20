@@ -1,0 +1,33 @@
+{
+  "name": "kath",
+  "version": "0.0.1",
+  "description": "Another in-memory caching",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest --maxWorkers=2",
+    "test:watch": "jest --watchAll --maxWorkers=2",
+    "build": "ncc build -m src/index.ts -o build",
+    "prebuild": "rm -rf ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KusStar/kath.git"
+  },
+  "keywords": [
+    "in-memory",
+    "cache"
+  ],
+  "author": "KusStar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KusStar/kath/issues"
+  },
+  "homepage": "https://github.com/KusStar/kath#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "@zeit/ncc": "^0.22.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5"
+  }
+}
