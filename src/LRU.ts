@@ -1,6 +1,6 @@
-import DoublyLinkedList, { Entry } from './DDL'
+import DDL, { Entry } from './DDL'
 
-export default class LRUCache extends DoublyLinkedList {
+export default class LRUCache extends DDL {
 
   private _capacity: number
   private _cache: Map<any, Entry>
@@ -50,8 +50,8 @@ export default class LRUCache extends DoublyLinkedList {
     this._cache.set(key, newNode)
   }
 
-  size() {
-    return this._cache.size
+  data() {
+    return this._cache
   }
 
   private moveToHead(node: Entry) {
