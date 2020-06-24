@@ -1,4 +1,4 @@
-import DDL, { Entry } from '../src/ddl'
+import DDL, { Entry } from '../src/DDL'
 
 function expectEntryToBe(entry: Entry | undefined, to: any) {
   expect(entry?.key).toEqual(to)
