@@ -1,5 +1,8 @@
 import LRUCache from './LRU'
+import { toJSON, toMap } from './parser'
 
 export {
-  LRUCache
+  LRUCache,
+  toJSON,
+  toMap
 }
