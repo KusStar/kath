@@ -35,7 +35,7 @@ export default class LRUCache extends DDL {
     }
 
     if (this._cache.size == this._capacity) {
-      const lastNode = this.tail
+      const lastNode = this.tail.prev
 
       if (lastNode) {
         this.delete(lastNode)
