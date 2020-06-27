@@ -18,7 +18,7 @@ describe('LRUCache', () => {
     expect(value).toEqual(undefined)
   })
 
-  it('should `put()` ', () => {
+  it('should `put()` works', () => {
     cache.put(testKey, testValue)
     expect(cache.data().size).toEqual(1)
   })
@@ -26,5 +26,14 @@ describe('LRUCache', () => {
   it('should `get()` return correct just `put()`', () => {
     const value = cache.get(testKey)
     expect(value).toEqual(testValue)
+  })
+
+  it('should `get()` return `newValue` just `put()`', () => {
+    const newValue = Date.now()
+    cache.put(testKey, newValue)
+
+    const value = cache.get(testKey)
+    expect(value).toEqual(newValue)
+    expect(cache.data().size).toEqual(1)
   })
 })
