@@ -1,6 +1,6 @@
 import { Entry } from './ddl'
 
-function toMap(cacheStr: string) {
+function toCacheMap(cacheStr: string) {
   return new Map<any, Entry>(JSON.parse(cacheStr))
 }
 
@@ -10,5 +10,5 @@ function toJSON(cacheMap: Map<any, Entry>) {
 
 export {
   toJSON,
-  toMap,
+  toCacheMap,
 }

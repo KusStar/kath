@@ -1,4 +1,4 @@
-import { toJSON ,toMap } from '../src/parser'
+import { toJSON ,toCacheMap } from '../src/parser'
 
 describe('parser test', () => {
   const timestamp = Date.now()
@@ -10,12 +10,12 @@ describe('parser test', () => {
     expect(toJSON(testMap)).toEqual(testString)
   })
 
-  it('should `toMap(...)` work', () => {
-    expect(toMap(testString)).toEqual(testMap)
+  it('should `toCacheMap(...)` work', () => {
+    expect(toCacheMap(testString)).toEqual(testMap)
   })
 
-  it('should `toJSON(...)` and `toMap(...)` both work', () => {
-    expect(toMap(toJSON(testMap))).toEqual(testMap)
-    expect(toJSON(toMap(testString))).toEqual(testString)
+  it('should `toJSON(...)` and `toCacheMap(...)` both work', () => {
+    expect(toCacheMap(toJSON(testMap))).toEqual(testMap)
+    expect(toJSON(toCacheMap(testString))).toEqual(testString)
   })
 })

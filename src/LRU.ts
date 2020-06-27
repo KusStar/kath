@@ -5,11 +5,11 @@ export default class LRUCache extends DDL {
   private _capacity: number
   private _cache: Map<any, Entry>
 
-  constructor(capacity: number) {
+  constructor(capacity: number, cache?: Map<any, Entry>) {
     super()
 
     this._capacity = capacity
-    this._cache = new Map<any, Entry>()
+    this._cache = cache ?? new Map<any, Entry>()
   }
 
   get(key: any) {
