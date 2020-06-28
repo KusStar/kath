@@ -2,16 +2,16 @@
   "name": "kath",
   "version": "0.0.1",
   "description": "Another in-memory caching",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "files": [
-    "build",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "test": "jest --maxWorkers=2",
     "test:watch": "jest --watchAll --maxWorkers=2",
-    "build": "ncc build -m src/index.ts -o build",
+    "build": "ncc build -m src/index.ts -o dist",
     "prebuild": "rm -rf ./build"
   },
   "repository": {
