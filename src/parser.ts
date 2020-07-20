@@ -1,4 +1,4 @@
-import { Entry } from './ddl'
+import { Entry } from './DDL'
 
 function toCacheMap(cacheStr: string) {
   return new Map<any, Entry>(JSON.parse(cacheStr))
