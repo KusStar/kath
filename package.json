@@ -1,6 +1,6 @@
 {
   "name": "kath",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Another in-memory caching",
   "main": "dist/index.js",
   "module": "dist/index.js",
